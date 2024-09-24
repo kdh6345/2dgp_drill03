@@ -9,20 +9,24 @@ open_canvas()
 grass = load_image('grass.png')
 character = load_image('character.png')
 def run_top():
+    print('top')
     pass
 def run_bottom():
+    print('bottom')
     pass
 def run_right():
+    print('right')
     pass
 def run_left():
+    print('left')
     pass
 
 def run_rectangle():
     print('RECTANGLE')
     run_top()
-    run_right()
-    run_bottom()
     run_left()
+    run_bottom()
+    run_right()
     
     clear_canvas_now()
     character.draw_now(400,300)
@@ -46,7 +50,7 @@ def run_circle():
 
 while True:
     run_rectangle()
-    run_circle()
+    #run_circle()
     break
     
 close_canvas()
