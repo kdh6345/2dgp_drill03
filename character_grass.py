@@ -3,7 +3,6 @@ from pico2d import *
 import random
 import math
 
-
 open_canvas()
 
 grass = load_image('grass.png')
@@ -56,37 +55,39 @@ def run_circle():
     pass
 
 def run_t1():
+    print('T1')
     for x in range(50,750,10):
         draw_boy(x,50)
     pass
 def run_t2():
-    
+    print('T2')
     x, y = 750, 50
     while x > 400:
         x -= math.cos(math.radians(45)) * 10  
         y += math.sin(math.radians(45)) * 10
         draw_boy(x, y)
+    pass
 
-def run_t3():
     
+def run_t3():
+    print('T3')
     x, y = 400, 400
     while x > 50:
         x -= math.cos(math.radians(45)) * 10  
         y -= math.sin(math.radians(45)) * 10  
         draw_boy(x, y)
-
+    pass
 
 def run_triangle():
     print('TRIANGLE')
     run_t1()
     run_t2()
     run_t3()
-
     pass
+
 while True:
     run_circle()
     run_rectangle()
     run_triangle()
-    break
     
 close_canvas()
