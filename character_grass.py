@@ -41,8 +41,6 @@ def run_rectangle():
     run_right()
     run_bottom()
     run_left()
-    
-    
     pass
 
 def run_circle():
@@ -57,10 +55,38 @@ def run_circle():
         draw_boy(x,y)
     pass
 
+def run_t1():
+    for x in range(50,750,10):
+        draw_boy(x,50)
+    pass
+def run_t2():
+    
+    x, y = 750, 50
+    while x > 400:
+        x -= math.cos(math.radians(45)) * 10  
+        y += math.sin(math.radians(45)) * 10
+        draw_boy(x, y)
 
+def run_t3():
+    
+    x, y = 400, 400
+    while x > 50:
+        x -= math.cos(math.radians(45)) * 10  
+        y -= math.sin(math.radians(45)) * 10  
+        draw_boy(x, y)
+
+
+def run_triangle():
+    print('TRIANGLE')
+    run_t1()
+    run_t2()
+    run_t3()
+
+    pass
 while True:
-    #run_circle()
+    run_circle()
     run_rectangle()
+    run_triangle()
     break
     
 close_canvas()
